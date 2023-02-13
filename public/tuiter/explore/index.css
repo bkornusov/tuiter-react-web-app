@@ -1,17 +1,20 @@
 html {
-  max-width: 700px;
-  background-color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 6px;
+  background-color: white;
   font-weight: 550;
 }
 
-body {
-  width: 100%;
-  margin-top: 0px;
+.wd-font-weight-bold {
+  font-weight: bold;
 }
 
-button {
-  background-color: black;
+.wd-navigation {
+  float: right;
+}
+
+.fa-stack {
+  text-align: left;
+  font-size: 60%;
 }
 
 ::placeholder {
@@ -19,68 +22,82 @@ button {
   color: rgb(113, 118, 123);
 }
 
+.wd-navigation-panel {
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+}
+
+#inline {
+  vertical-align: middle;
+  display: inline-flex;
+}
+
 .wd-top-panel {
-  border-left: 1px solid rgb(47, 51, 54);
-  border-right: 1px solid rgb(47, 51, 54);
-  margin-left: 16px;
+  display: flex;
 }
 
 .wd-searchbox {
-  height: 25px;
-  width: 75%;
+  text-indent: 40px;
   padding: 5px 5px 5px 16px;
-  margin: 12px 12px 16px 16px;
-  border-radius: 25px;
   color: white;
-  background-color: rgb(32, 35, 39);
-  outline: none;
+}
+
+.wd-search-icon {
+  position: relative;
+  top: 12px;
+  left: 30px;
 }
 
 .wd-explore-settings {
   display: inline;
-  text-align: right;
-}
-
-.wd-explore-settings-button {
-  height: 40px;
-  width: 40px;
-  object-fit: cover;
-  vertical-align: middle;
-  color: rgb(29, 161, 242);
+  float: right;
 }
 
 .wd-topics {
-  margin-left: 16px;
   display: flex;
   justify-content: flex-start;
 }
 
 .wd-topic-selected {
-  color: rgb(29, 161, 242);
-  padding: 16px 16px 16px 16px;
+  color: black;
+  padding: 16px;
   text-align: center;
   font-size: 15px;
-  text-decoration: underline;
+  text-decoration: none;
+  /* text-decoration: underline;
   text-underline-offset: 18px;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 3px; */
 }
 
 .wd-topic {
-  color: rgb(110, 118, 125);
+  color: rgb(29, 161, 242);
   padding: 16px;
   font-size: 15px;
   text-decoration: none;
 }
 
 .wd-splitter {
-  margin-left: 16px;
   height: 13px;
   background-color: rgb(32, 35, 39);
   border: 1px solid rgb(47, 51, 54);
 }
 
+.wd-main-image {
+  position: relative;
+  width: 100%;
+}
+
+.wd-main-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  font-size: 200%;
+  padding: 0px 0px 0px 20px;
+}
+
 .wd-suggested-trend {
-  margin-left: 16px;
   border-left: 1px solid rgb(47, 51, 54);
   border-right: 1px solid rgb(47, 51, 54);
   padding: 10px 20px 6px 20px;
@@ -88,8 +105,8 @@ button {
 }
 
 .wd-trend-title {
+  font-weight: bold;
   line-height: 28px;
-  color: white;
   font-size: 15px;
 }
 
@@ -98,33 +115,14 @@ button {
   font-size: 13px;
 }
 
-.wd-suggested-post {
-  margin-left: 16px;
-  border: 1px solid rgb(47, 51, 54);
-  padding: 10px 20px 6px 20px;
-  height: 110px;
-}
-
-.wd-post-author {
-  color: white;
-  font-size: 15px;
-}
-
 .wd-post-title {
   line-height: 32px;
-  color: white;
   font-size: 15px;
 }
 
 .wd-post-author {
-  color: white;
   font-size: 13px;
   margin-right: 10px;
-}
-
-.wd-post-subtitle {
-  color: rgb(110, 118, 125);
-  font-size: 13px;
 }
 
 .wd-post-image {
@@ -133,4 +131,21 @@ button {
   height: 100px;
   object-fit: cover;
   float: right;
+}
+
+.wd-other-users {
+  justify-content: start;
+  display: flex;
+  float: left;
+}
+
+.wd-user {
+  height: 100%;
+}
+
+.wd-user-image {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
