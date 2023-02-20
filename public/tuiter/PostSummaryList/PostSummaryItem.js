@@ -1,14 +1,14 @@
 function PostSummaryItem(post) {
   let listItem = `
     <li class="list-group-item pt-2 ms-0 me-0 row" id="inline">
-      <div class="col-10" >
+      <div class="col-9" >
         <span class="wd-trend-subtitle">${post.topic}</span><br />
         <span class="wd-trend-subtitle"> - ${post.time}</span><br />
         <p class="wd-trend-title">
           ${post.title}
         </p>
       </div>
-      <div class="col-2">
+      <div class="col-3">
         <img width="100%" class="wd-post-image float-end mt-2"
           src="${post.image}" />
       </div>

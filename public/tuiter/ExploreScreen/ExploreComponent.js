@@ -2,7 +2,7 @@ import PostSummaryList from "../PostSummaryList/index.js";
 
 const ExploreComponent = () => {
   return `
-    <div class="wd-top-panel mb-2 justify-content-start">
+    <div class="wd-top-panel mb-2">
       <i class="fa fa-search wd-search-icon "></i>
       <input class="form-control rounded-pill wd-searchbox" type="search" placeholder="Search Tuiter" />
       <a class="wd-explore-settings" href="explore-settings.html">
