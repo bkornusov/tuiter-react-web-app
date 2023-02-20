@@ -1,7 +1,5 @@
 html {
   margin-top: 6px;
-  background-color: white;
-  font-weight: 550;
 }
 
 .wd-font-weight-bold {
@@ -26,6 +24,10 @@ html {
   display: flex;
   justify-content: flex-end;
   float: right;
+}
+
+#no-wrap {
+  white-space: nowrap;
 }
 
 #inline {
