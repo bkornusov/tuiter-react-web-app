@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 console.log("Hello World!");
 
 console.log("Variables and Constants");
