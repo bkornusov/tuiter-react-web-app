@@ -13,7 +13,7 @@ const PostSummaryListItem = ({
   },
 }) => {
   let listItem = (
-    <div>
+    <>
       <li className="list-group-item pt-2 ms-0 me-0 row" id="inline">
         <div className="col-9">
           <span className="wd-trend-subtitle">{post.topic}</span>
@@ -37,7 +37,7 @@ const PostSummaryListItem = ({
           />
         </div>
       </li>
-    </div>
+    </>
   );
   return listItem;
 };
