@@ -1,26 +1,38 @@
+import { useDispatch } from "react-redux";
+import { updateTuitThunk } from "../../services/tuits-thunks";
+
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const TuitStats = ({ tuit }) => {
-  const liked = tuit.liked;
-  const replies = tuit.replies;
-  const retuits = tuit.retuits;
-  const likes = tuit.likes;
+  const dispatch = useDispatch();
   return (
     <div className="d-flex">
       <a className="col-3" href="#">
         <i className="bi bi-chat me-1"></i>
-        {replies}
+        {tuit.replies}
       </a>
       <a className="col-3" href="#">
         <i className="bi bi-arrow-repeat me-1"></i>
-        {retuits}
+        {tuit.retuits}
       </a>
       <a className="col-3" href="#">
-        {liked ? (
+        {/* {tuit.liked ? (
           <i className="bi bi-suit-heart-fill me-1"></i>
         ) : (
           <i className="bi bi-suit-heart me-1"></i>
-        )}
-        {likes}
+        )} */}
+        <i
+          onClick={() =>
+            dispatch(
+              updateTuitThunk({
+                ...tuit,
+                likes: tuit.likes + 1,
+              })
+            )
+          }
+          className="bi bi-heart-fill me-2 text-danger"
+        ></i>
+
+        {tuit.likes}
       </a>
       <a className="col-3" href="#">
         <i className="bi bi-upload me-1"></i>

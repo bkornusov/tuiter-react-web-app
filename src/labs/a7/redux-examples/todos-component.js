@@ -28,7 +28,7 @@ const Todos = () => {
       <h3>Todos</h3>
       <ul className="list-group">
         <li className="list-group-item">
-          <div class="d-flex justify-content-center">
+          <div className="d-flex justify-content-center">
             <input
               onChange={todoChangeHandler}
               value={todo.do}

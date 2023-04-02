@@ -2,7 +2,7 @@ import React from "react";
 import TuitStats from "./tuit-stats";
 import "../styles/index.css";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "./tuits-reducer";
+import { deleteTuitThunk } from "../../services/tuits-thunks";
 
 const TuitItem = ({
   tuit = {
@@ -22,7 +22,7 @@ const TuitItem = ({
 }) => {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   };
 
   let listItem = (
@@ -46,7 +46,7 @@ const TuitItem = ({
             <div className="text-muted ms-2">{tuit.handle}</div>
             <div className="text-muted"> - {tuit.time}</div>
           </div>
-          <div class="">{tuit.tuit}</div>
+          <div className="">{tuit.tuit}</div>
           <TuitStats tuit={tuit} />
         </div>
       </li>
